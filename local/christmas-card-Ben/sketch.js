@@ -522,7 +522,7 @@ function loadData()
         money = 1000;
         storeItem(STORAGE_KEY, money);
     } else {
-        money = saveData;
+        money = parseInt(saveData);
     }
 }
 

@@ -73,7 +73,7 @@ function gameOver() { // Game over scene Script
     if (noahsDogShitCode)
     {
         // saveData = loadJSON("save.json", saveScore);
-        saveData = getItem(STORAGE_KEY);
+        saveData = parseInt(getItem(STORAGE_KEY));
         saveScore();
         noahsDogShitCode = false;
     }
