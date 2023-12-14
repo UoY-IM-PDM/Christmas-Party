@@ -339,6 +339,7 @@ class Item
             {
                 this.#purchased = true;
                 money -= this.#price;
+                storeItem(STORAGE_KEY, money);
             }
     }
 
@@ -395,7 +396,7 @@ class SnowSprite
 function preload()
 {
     // saveData = loadJSON("save.json", loadData);
-    localStorage.clear(); // Clears the score from previous sessions
+    storeItem(STORAGE_KEY, 1000);
     loadData()
 
     bgm = loadSound("assets/bgm.wav");
